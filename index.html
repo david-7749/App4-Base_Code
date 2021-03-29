@@ -23,9 +23,163 @@ Known Issues:
 blah, blah, blah, blah
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
-   </body>
+  <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var skinny_count = 0;
+        var strong_count = 0;
+	
+        function skinnyAdd(){
+            allergy_count = allergy_count + 1;
+	
+        }
+
+        function strongAdd(){
+            cold_count = cold_count + 1;
+		
+        }
+	function resultsPercents(){
+		var resultText = document.getElementById("results");
+		var skinnyCalcu = (skinny_count / (skinny_count + strong_count)) * 100
+		var strongCalcu = (strong_count / (skinny_count + strong_count)) * 100
+		resultText.innerHTML = "Probability it is allergies =" + skinnyCalcu + "%<br> Probability it is a cold =" + strongCalcu + "%";
+	}
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-belize-hole">
+	<h1>Skinny or Strong?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you sick of wondering if you're skinny or strong? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-blue w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-belize-hole">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Is the circumference of your bicep larger than 15 inches?</p>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+	
+    	</div>
+</div>
+
+<div class="page" id="two">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Can You Bench Press More Than 225 pounds?</p>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
+	</div>
+</div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Can you see your ribs beneath your pectoral muscle?</p>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
+	</div>
+</div>	
+	
+<div class="page" id="four">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you eat more than 2 meals a day??</p>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+	</div>
+
+</div>
+<div class="page" id="five">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your traps more like mountains or valleys?</p>
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-blue"> MOUNTAINS </a>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-blue"> VALLEYS </a>
+	</div>
+
+</div>
+	</div>
+<div class="page" id="six">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do Your Collarbones Have Dominance Over Your Physique?</p>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+	</div>
+
+</div>
+<div class="page" id="results">
+	<div class="w3-container w3-flat-belize-hole">
+		<h1>Your Results!</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a onclick="resultsPercents();" class="w3-btn w3-blue"> Get Your Results! </a>
+
+	</div>
+</div>	
+	
+<footer class="w3-bottom w3-container w3-flat-belize-hole">
+	<p>Symptoms Test</p>
+</footer>
+
+</body>
 </html>
