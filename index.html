@@ -37,19 +37,19 @@ blah, blah, blah, blah
         var strong_count = 0;
 	
         function skinnyAdd(){
-            allergy_count = allergy_count + 1;
+            skinny_count = skinny_count + 1;
 	
         }
 
         function strongAdd(){
-            cold_count = cold_count + 1;
+            strong_count = strong_count + 1;
 		
         }
 	function resultsPercents(){
 		var resultText = document.getElementById("results");
 		var skinnyCalcu = (skinny_count / (skinny_count + strong_count)) * 100
 		var strongCalcu = (strong_count / (skinny_count + strong_count)) * 100
-		resultText.innerHTML = "Probability it is allergies =" + skinnyCalcu + "%<br> Probability it is a cold =" + strongCalcu + "%";
+		resultText.innerHTML = "Your Skinniness Percentage =" + skinnyCalcu + "%<br> Your Swoleness Percentage =" + strongCalcu + "%";
 	}
   </script>
 
@@ -98,8 +98,8 @@ blah, blah, blah, blah
 	
     	<div id="content" class="w3-container">
         <p>Is the circumference of your bicep larger than 15 inches?</p>
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
-		<a href="#two" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+		<a href="#two" onclick="skinnyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#two" onclick="strongAdd();" class="w3-btn w3-blue"> NO </a>
 	
     	</div>
 </div>
@@ -111,8 +111,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 	<p>Can You Bench Press More Than 225 pounds?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
+		<a href="#three" onclick="strongAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#three" onclick="skinnyAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 </div>	
 
@@ -123,8 +123,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>Can you see your ribs beneath your pectoral muscle?</p>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-blue"> YES </a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-blue"> NO </a>
+		<a href="#four" onclick="strongAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#four" onclick="skinnyAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 </div>	
 	
@@ -135,8 +135,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>Do you eat more than 2 meals a day??</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+		<a href="#five" onclick="skinnyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#five" onclick="strongAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 
 </div>
@@ -147,8 +147,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>Are your traps more like mountains or valleys?</p>
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-blue"> MOUNTAINS </a>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-blue"> VALLEYS </a>
+		<a href="#six" onclick="skinnyAdd();" class="w3-btn w3-blue"> MOUNTAINS </a>
+		<a href="#six" onclick="strongAdd();" class="w3-btn w3-blue"> VALLEYS </a>
 	</div>
 
 </div>
@@ -160,8 +160,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>Do Your Collarbones Have Dominance Over Your Physique?</p>
-		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-blue"> YES </a>
-		<a href="#results" onclick="coldAdd();" class="w3-btn w3-blue"> NO </a>
+		<a href="#results" onclick="skinnyAdd();" class="w3-btn w3-blue"> YES </a>
+		<a href="#results" onclick="strongAdd();" class="w3-btn w3-blue"> NO </a>
 	</div>
 
 </div>
@@ -178,7 +178,7 @@ blah, blah, blah, blah
 </div>	
 	
 <footer class="w3-bottom w3-container w3-flat-belize-hole">
-	<p>Symptoms Test</p>
+	<p>Strong Vs. Skinniness</p>
 </footer>
 
 </body>
